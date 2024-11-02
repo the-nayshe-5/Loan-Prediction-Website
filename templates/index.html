@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Default Prediction</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Loan Default Prediction</h1>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="credit_lines_outstanding">Credit Lines Outstanding:</label>
+                <input type="number" id="credit_lines_outstanding" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loan_amt_outstanding">Loan Amount Outstanding:</label>
+                <input type="number" id="loan_amt_outstanding" required>
+            </div>
+
+            <div class="form-group">
+                <label for="total_debt_outstanding">Total Debt Outstanding:</label>
+                <input type="number" id="total_debt_outstanding" required>
+            </div>
+
+            <div class="form-group">
+                <label for="income">Income:</label>
+                <input type="number" id="income" required>
+            </div>
+
+            <div class="form-group">
+                <label for="years_employed">Years Employed:</label>
+                <input type="number" id="years_employed" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fico_score">FICO Score:</label>
+                <input type="number" id="fico_score" required>
+            </div>
+
+            <div class="form-group">
+                <label for="recovery_rate">Recovery Rate (in %):</label>
+                <input type="number" id="recovery_rate" step="1" value="10" required>
+            </div>
+
+            <button type="submit">Evaluate</button>
+        </form>
+
+        <!-- Modal for Results -->
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Results</h2>
+                <p id="resultText"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Additional JavaScript -->
+    <script src="../static/script.js"></script>
+</body>
+</html>
